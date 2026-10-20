@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #f6f3ed;
+  background: #101014;
+  color-scheme: dark;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+textarea,
+select {
+  outline-offset: 5px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #ff6f88;
+}
+header {
+  padding: 24px max(24px, calc((100vw - 1240px) / 2));
+  border-bottom: 1px solid #302c33;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+.brand img {
+  width: 36px;
+  height: 36px;
+}
+.product {
+  font-size: 13px;
+  color: #d9bbc3;
+  letter-spacing: 0.05em;
+}
+nav {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: #bdb8c1;
+}
+main {
+  max-width: 1240px;
+  margin: auto;
+  padding: 62px 24px;
+}
+h1 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(38px, 5vw, 64px);
+  max-width: 850px;
+  line-height: 1.06;
+  letter-spacing: -1.6px;
+  margin: 20px 0;
+}
+p {
+  line-height: 1.7;
+  color: #bdb8c1;
+  max-width: 720px;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #ff738e;
+  text-transform: uppercase;
+}
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 26px;
+  margin-top: 40px;
+}
+.panel {
+  border: 1px solid #38303b;
+  border-radius: 18px;
+  padding: 26px;
+  min-width: 0;
+  background: #19171d;
+}
+.panel h2 {
+  margin: 0 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.fields {
+  display: grid;
+  gap: 18px;
+}
+label {
+  display: grid;
+  gap: 9px;
+  font-size: 13px;
+  color: #e3dbe2;
+}
+input,
+textarea,
+select {
+  border: 1px solid #4a3b49;
+  border-radius: 9px;
+  padding: 12px;
+  background: #111015;
+  color: #f6f3ed;
+  min-width: 0;
+  width: 100%;
+  font-size: 16px;
+}
+textarea {
+  min-height: 132px;
+  resize: vertical;
+  line-height: 1.5;
+}
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #d51a40;
+}
+input[type="color"] {
+  height: 46px;
+  padding: 5px;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  background: #d81b42;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.secondary {
+  background: transparent;
+  border: 1px solid #5c4655;
+  color: #e4d8df;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #100f13;
+  border-radius: 10px;
+  padding: 18px;
+  line-height: 1.5;
+  font-size: 13px;
+  max-height: 540px;
+  overflow: auto;
+  border: 1px solid #302631;
+  min-height: 160px;
+}
+#preview {
+  display: none;
+  max-height: 520px;
+  max-width: 100%;
+  width: auto;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  object-fit: contain;
+}
+#status {
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 48px;
+  color: #ecc4ce;
+  margin-top: 22px;
+}
+.note {
+  font-size: 12px;
+  color: #aaa1ad;
+}
+.error {
+  color: #ffb1b8 !important;
+}
+footer {
+  padding: 22px 24px;
+  border-top: 1px solid #302c33;
+  font-size: 12px;
+  color: #b8adb9;
+  line-height: 1.8;
+  text-align: center;
+}
+footer a {
+  margin: 0 5px;
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 740px) {
+  header {
+    padding: 18px;
+    align-items: flex-start;
+  }
+  .brand {
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  nav {
+    gap: 10px;
+    font-size: 11px;
+  }
+  .workspace {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  main {
+    padding: 34px 18px;
+  }
+  .panel {
+    padding: 19px;
+  }
+  h1 {
+    letter-spacing: -1px;
+  }
+  .actions button {
+    flex: 1;
+  }
+  pre {
+    max-height: 320px;
+  }
+}
