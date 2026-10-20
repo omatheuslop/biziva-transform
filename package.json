@@ -12,7 +12,9 @@
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
     "now-build": "next build",
     "postinstall": "patch-package",
-    "build:analyze": "ANALYZE=true yarn build"
+    "build:analyze": "ANALYZE=true yarn build",
+    "biziva": "node public/biziva/server.mjs",
+    "test:biziva": "node --test public/biziva/*.test.mjs"
   },
   "engines": {
     "node": "20.x"
